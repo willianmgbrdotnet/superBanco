@@ -38,20 +38,24 @@ namespace SuperBanco
 
             //Auto-gera um novo numero de conta para cada novo Objeto
             numeroConta++;
-
             //Converterá numeroConta de int para string, uma vez que a 
             //propriedade Numero é do tipo string
             this.Numero = numeroConta.ToString();
+            
+            Depositar(valor, DateTime.Now, "Saldo inicial");
         }
 
         //Métodos ou funções da Conta
-        public void Depositar()
+        public void Depositar(decimal valor, DateTime data, string obs)
         {
-            
+            var trans = new Transacao(valor, data, obs);
+            todasTransacoes.Add(trans);
         }
-        public void Sacar()
+        public void Sacar(decimal valor, DateTime data, string obs)
         {
-            
+            //A diferença do Depositar é o valor negativo
+            var trans = new Transacao(-valor, data, obs);
+            todasTransacoes.Add(trans);
         }
 
 
