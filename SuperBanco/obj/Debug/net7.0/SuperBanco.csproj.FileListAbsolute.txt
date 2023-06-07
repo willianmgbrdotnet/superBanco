@@ -1,0 +1,15 @@
+C:\c#\superBanco\SuperBanco\bin\Debug\net7.0\SuperBanco.exe
+C:\c#\superBanco\SuperBanco\bin\Debug\net7.0\SuperBanco.deps.json
+C:\c#\superBanco\SuperBanco\bin\Debug\net7.0\SuperBanco.runtimeconfig.json
+C:\c#\superBanco\SuperBanco\bin\Debug\net7.0\SuperBanco.dll
+C:\c#\superBanco\SuperBanco\bin\Debug\net7.0\SuperBanco.pdb
+C:\c#\superBanco\SuperBanco\obj\Debug\net7.0\SuperBanco.csproj.AssemblyReference.cache
+C:\c#\superBanco\SuperBanco\obj\Debug\net7.0\SuperBanco.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\superBanco\SuperBanco\obj\Debug\net7.0\SuperBanco.AssemblyInfoInputs.cache
+C:\c#\superBanco\SuperBanco\obj\Debug\net7.0\SuperBanco.AssemblyInfo.cs
+C:\c#\superBanco\SuperBanco\obj\Debug\net7.0\SuperBanco.csproj.CoreCompileInputs.cache
+C:\c#\superBanco\SuperBanco\obj\Debug\net7.0\SuperBanco.dll
+C:\c#\superBanco\SuperBanco\obj\Debug\net7.0\refint\SuperBanco.dll
+C:\c#\superBanco\SuperBanco\obj\Debug\net7.0\SuperBanco.pdb
+C:\c#\superBanco\SuperBanco\obj\Debug\net7.0\SuperBanco.genruntimeconfig.cache
+C:\c#\superBanco\SuperBanco\obj\Debug\net7.0\ref\SuperBanco.dll
