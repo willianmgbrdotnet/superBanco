@@ -32,27 +32,35 @@ namespace SuperBanco
         {
             this.Dono = nome;
 
-            //A partir de agora o valor do Saldo não será mais o especificado na construção do objeto,
-            //começará com 0(zero) e as transações se encarregarão disso.
-            /*this.Saldo = valor;*/
-
             //Auto-gera um novo numero de conta para cada novo Objeto
             numeroConta++;
             //Converterá numeroConta de int para string, uma vez que a 
             //propriedade Numero é do tipo string
             this.Numero = numeroConta.ToString();
-            
+
             Depositar(valor, DateTime.Now, "Saldo inicial");
         }
 
         //Métodos ou funções da Conta
         public void Depositar(decimal valor, DateTime data, string obs)
         {
+            if (valor <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(valor), "Não aceitamos depósito de valor 0 ou negativo");
+            }
             var trans = new Transacao(valor, data, obs);
             todasTransacoes.Add(trans);
         }
         public void Sacar(decimal valor, DateTime data, string obs)
         {
+            if (valor <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(valor), "Não aceitamos saque de valor 0 ou negativo");
+            }
+            if(Saldo - valor < 0)
+            {
+                throw new InvalidOperationException("Saldo insuficiente. Operação não permitida."); 
+            }
             //A diferença do Depositar é o valor negativo
             var trans = new Transacao(-valor, data, obs);
             todasTransacoes.Add(trans);
