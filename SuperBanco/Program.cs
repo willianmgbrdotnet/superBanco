@@ -14,7 +14,24 @@ namespace SuperBanco
             contaB.Depositar(200, DateTime.Now, "Dividendos");
             Console.WriteLine($"A conta está com {contaB.Saldo}");
 
-            contaB.Sacar(50000, DateTime.Now, "Happy Hour");
+            try
+            {
+                contaB.Sacar(50000, DateTime.Now, "Happy Hour");
+                Console.WriteLine($"A conta está com {contaB.Saldo}");
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                System.Console.WriteLine(ex.Message);
+            }
+            catch(Exception ex)
+            {
+                System.Console.WriteLine("Operação não realizada");
+            }
+
+            contaB.Sacar(1000, DateTime.Now, "Filantropia");
+            Console.WriteLine($"A conta está com {contaB.Saldo}");
+
+            contaB.Sacar(500, DateTime.Now, "happy hour");
             Console.WriteLine($"A conta está com {contaB.Saldo}");
 
         }
