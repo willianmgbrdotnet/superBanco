@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SuperBanco
@@ -66,6 +67,21 @@ namespace SuperBanco
             todasTransacoes.Add(trans);
         }
 
+        //Uma forma de exibir o Extrato bancario no console usando o StringBuilder
+        public string PegarMovimentacao()
+        {
+            var movimentacoes = new StringBuilder();
 
+            //"\t" separa cada item com o espaçamento referente a tecla TAB
+            movimentacoes.AppendLine("Data\t\tValor\tObs");
+
+            foreach (var item in todasTransacoes)
+            {
+                //armazena nesta variável todos os itens em uma mesma linha
+                movimentacoes.AppendLine($"{item.Data.ToShortDateString()}\t{item.Valor}\t{item.Obs}");
+            }
+            //converte o tipo StringBuilder para string
+            return movimentacoes.ToString();
+        }
     }
 }

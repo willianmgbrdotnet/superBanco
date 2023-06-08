@@ -34,6 +34,8 @@ namespace SuperBanco
             contaB.Sacar(500, DateTime.Now, "happy hour");
             Console.WriteLine($"A conta está com {contaB.Saldo}");
 
+            System.Console.WriteLine(contaB.PegarMovimentacao());
+
         }
         
     }    
